@@ -4,17 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NSD Vishu Result | Sarkari Job Portal</title>
+<title>NSD Vishu Result | Government Job Portal</title>
 
 <meta name="description"
 content="NSD Vishu Result - Latest Government Jobs, Vacancy, Admit Card, Results and Answer Key Updates.">
 
 <style>
 
-/* =========================================================
+/* =========================
    RESET
-========================================================= */
-
+========================= */
 *{
     margin:0;
     padding:0;
@@ -26,1208 +25,669 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#F7F3FB;
-    color:#30213F;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f8f5fc;
+    color:#2d2340;
     line-height:1.6;
 }
 
-
-/* =========================================================
-   THEME
-========================================================= */
-
-:root{
-
-    --purple-dark:#241039;
-    --purple-deep:#3B176D;
-    --purple:#6D28D9;
-    --purple-light:#8B5CF6;
-    --purple-soft:#F1E8FF;
-
-    --orange-dark:#C2410C;
-    --orange:#F97316;
-    --orange-light:#FB923C;
-
-    --gold:#F59E0B;
-    --gold-soft:#FFF3D6;
-
-    --cream:#FFFDF7;
-    --cream-dark:#FFF5DF;
-
-    --white:#FFFFFF;
-
-    --text:#30213F;
-    --muted:#756A82;
-
-    --green:#16A34A;
-    --red:#E11D48;
-
-    --border:#E8DDF1;
-
-    --shadow:
-        0 8px 25px rgba(59,23,109,.08);
-
-    --shadow-sm:
-        0 5px 18px rgba(59,23,109,.07);
-
-    --shadow-hover:
-        0 15px 35px rgba(59,23,109,.16);
+button,
+input{
+    font-family:inherit;
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* =========================
+   COLORS
+========================= */
+:root{
+    --purple-dark:#24103b;
+    --purple:#6d28d9;
+    --purple-light:#8b5cf6;
+    --orange:#f97316;
+    --orange-light:#fb923c;
+    --cream:#fffaf0;
+    --white:#ffffff;
+    --text:#292039;
+    --muted:#766d82;
+    --border:#e8dff0;
+    --green:#16a34a;
+    --red:#e11d48;
+}
 
-.top-header{
+
+/* =========================
+   HEADER
+========================= */
+.header{
+    background:
+        radial-gradient(circle at 90% 0%,rgba(249,115,22,.35),transparent 25%),
+        radial-gradient(circle at 5% 100%,rgba(251,146,60,.18),transparent 25%),
+        linear-gradient(135deg,#24103b,#4c1d95,#7c3aed);
+
+    color:white;
+    text-align:center;
+    padding:28px 15px 25px;
     position:relative;
     overflow:hidden;
-    text-align:center;
-    color:#fff;
-    padding:28px 15px 25px;
-
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(249,115,22,.35),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 5% 100%,
-            rgba(251,146,60,.18),
-            transparent 25%
-        ),
-        linear-gradient(
-            135deg,
-            #241039,
-            #4C1D95 52%,
-            #7C3AED
-        );
-
-    box-shadow:
-        0 5px 20px rgba(40,16,61,.20);
 }
 
-.top-header::before{
-    content:"";
-    position:absolute;
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    right:-70px;
-    top:-120px;
-    background:rgba(255,255,255,.08);
-}
-
-.top-header::after{
-    content:"";
-    position:absolute;
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    left:-70px;
-    bottom:-105px;
-    background:rgba(249,115,22,.13);
-}
-
-.logo{
-    position:relative;
-    z-index:2;
+.header h1{
     font-size:29px;
     font-weight:800;
-    letter-spacing:.2px;
-}
-
-.logo span{
-    color:#FFD166;
-}
-
-.tagline{
     position:relative;
     z-index:2;
-    margin-top:5px;
+}
+
+.header h1 span{
+    color:#ffd166;
+}
+
+.header p{
     font-size:12px;
-    color:rgba(255,255,255,.90);
+    margin-top:4px;
+    color:rgba(255,255,255,.9);
 }
 
 
-/* =========================================================
+/* =========================
    NAVBAR
-========================================================= */
-
+========================= */
 .navbar{
+    background:#28113f;
     position:sticky;
     top:0;
-    z-index:999;
-
-    background:
-        linear-gradient(
-            90deg,
-            #241039,
-            #35145D,
-            #241039
-        );
-
-    box-shadow:
-        0 4px 15px rgba(40,16,61,.22);
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,.18);
 }
 
-.nav-container{
+.nav{
     max-width:1200px;
     margin:auto;
-
     display:flex;
     justify-content:center;
-
     overflow-x:auto;
     scrollbar-width:none;
 }
 
-.nav-container::-webkit-scrollbar{
+.nav::-webkit-scrollbar{
     display:none;
 }
 
-.nav-container a{
-    position:relative;
-
-    padding:15px 16px;
-
-    color:#fff;
+.nav a{
+    color:white;
     text-decoration:none;
+    padding:14px 16px;
     white-space:nowrap;
-
-    font-size:13px;
-    font-weight:600;
-
-    transition:.25s;
-}
-
-.nav-container a:hover,
-.nav-container a.active{
-    background:#4C1D95;
-    color:#FFD166;
-}
-
-.nav-container a::after{
-    content:"";
-
-    position:absolute;
-    left:15%;
-    right:15%;
-    bottom:0;
-
-    height:3px;
-    border-radius:10px;
-
-    background:#F59E0B;
-
-    transform:scaleX(0);
-    transition:.25s;
-}
-
-.nav-container a:hover::after,
-.nav-container a.active::after{
-    transform:scaleX(1);
-}
-
-
-/* =========================================================
-   MAIN
-========================================================= */
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:28px 16px 55px;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-    position:relative;
-    overflow:hidden;
-
-    text-align:center;
-
-    padding:35px 20px;
-
-    margin-bottom:30px;
-
-    border:1px solid #E8DDF2;
-    border-radius:20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #FFFFFF,
-            #FFFDF8 55%,
-            #FFF1D7
-        );
-
-    box-shadow:var(--shadow);
-}
-
-.hero::before{
-    content:"";
-
-    position:absolute;
-
-    width:170px;
-    height:170px;
-
-    border-radius:50%;
-
-    right:-60px;
-    top:-85px;
-
-    background:
-        rgba(109,40,217,.08);
-}
-
-.hero::after{
-    content:"";
-
-    position:absolute;
-
-    width:120px;
-    height:120px;
-
-    border-radius:50%;
-
-    left:-45px;
-    bottom:-65px;
-
-    background:
-        rgba(249,115,22,.10);
-}
-
-.hero-icon{
-    position:relative;
-    z-index:2;
-
-    display:flex;
-
-    width:58px;
-    height:58px;
-
-    align-items:center;
-    justify-content:center;
-
-    margin:0 auto 10px;
-
-    border-radius:17px;
-
-    color:#fff;
-    font-size:28px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--purple),
-            var(--purple-light)
-        );
-
-    box-shadow:
-        0 7px 20px rgba(109,40,217,.25);
-}
-
-.hero h1{
-    position:relative;
-    z-index:2;
-
-    margin-bottom:7px;
-
-    color:var(--purple-deep);
-
-    font-size:27px;
-    font-weight:800;
-}
-
-.hero p{
-    position:relative;
-    z-index:2;
-
-    max-width:700px;
-    margin:auto;
-
-    color:var(--muted);
-
-    font-size:14px;
-}
-
-
-/* =========================================================
-   SEARCH
-========================================================= */
-
-.search-box{
-    display:flex;
-    gap:10px;
-
-    max-width:720px;
-
-    margin:22px auto 0;
-
-    position:relative;
-    z-index:3;
-}
-
-.search-box input{
-    flex:1;
-    min-width:0;
-
-    padding:13px 15px;
-
-    border:1px solid #DCCCEB;
-    border-radius:10px;
-
-    outline:none;
-
-    background:#fff;
-    color:var(--text);
-
-    font-size:13px;
-}
-
-.search-box input:focus{
-    border-color:var(--purple);
-
-    box-shadow:
-        0 0 0 3px rgba(109,40,217,.10);
-}
-
-.search-btn{
-    border:none;
-
-    padding:0 20px;
-
-    border-radius:10px;
-
-    color:#fff;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--purple),
-            var(--orange)
-        );
-
+    font-size:12px;
+    font-weight:bold;
+    border-bottom:3px solid transparent;
     transition:.2s;
 }
 
-.search-btn:hover{
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 7px 16px rgba(109,40,217,.20);
+.nav a:hover,
+.nav a.active{
+    color:#ffd166;
+    background:#4c1d95;
+    border-bottom-color:#f59e0b;
 }
 
 
-/* =========================================================
-   SECTION TITLE
-========================================================= */
+/* =========================
+   MAIN
+========================= */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:25px 15px 50px;
+}
 
-.section-title{
+
+/* =========================
+   HERO
+========================= */
+.hero{
+    background:
+        radial-gradient(circle at 100% 0%,rgba(109,40,217,.10),transparent 25%),
+        radial-gradient(circle at 0% 100%,rgba(249,115,22,.10),transparent 25%),
+        linear-gradient(135deg,#fff,#fffaf0);
+
+    border:1px solid #eadff2;
+    border-radius:20px;
+    padding:32px 20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(59,23,109,.08);
+}
+
+.hero-icon{
+    width:55px;
+    height:55px;
+    margin:auto;
+    margin-bottom:10px;
+
     display:flex;
     align-items:center;
-    gap:11px;
+    justify-content:center;
 
-    margin:28px 0 18px;
+    border-radius:16px;
+    font-size:27px;
+    background:linear-gradient(135deg,#6d28d9,#f97316);
+    box-shadow:0 8px 20px rgba(109,40,217,.25);
+}
 
-    color:var(--purple-deep);
+.hero h2{
+    color:#4c1d95;
+    font-size:27px;
+}
 
+.hero p{
+    color:#766d82;
+    font-size:13px;
+    margin-top:5px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+.search{
+    max-width:700px;
+    margin:20px auto 0;
+    display:flex;
+    gap:8px;
+}
+
+.search input{
+    flex:1;
+    min-width:0;
+    border:1px solid #dccfea;
+    border-radius:10px;
+    padding:13px 14px;
+    outline:none;
+    background:white;
+}
+
+.search input:focus{
+    border-color:#6d28d9;
+    box-shadow:0 0 0 3px rgba(109,40,217,.1);
+}
+
+.search button{
+    border:0;
+    padding:0 20px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#6d28d9,#f97316);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+.section-title{
+    margin:30px 0 17px;
+    color:#3b176d;
     font-size:21px;
-    font-weight:800;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .section-title::before{
     content:"";
-
     width:5px;
-    height:29px;
-
+    height:27px;
     border-radius:10px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            var(--orange),
-            var(--gold)
-        );
+    background:linear-gradient(#f97316,#f59e0b);
 }
 
 
-/* =========================================================
+/* =========================
    FILTER
-========================================================= */
-
-.filter-buttons{
+========================= */
+.filters{
     display:flex;
+    gap:8px;
     flex-wrap:wrap;
-    gap:9px;
-
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
-.filter-btn{
+.filter{
+    border:1px solid #dfd3e9;
+    background:white;
+    color:#4c1d95;
     padding:8px 14px;
-
-    border:1px solid #DFD2EA;
     border-radius:30px;
-
-    background:#fff;
-
-    color:var(--purple-deep);
-
     font-size:12px;
-    font-weight:700;
-
+    font-weight:bold;
     cursor:pointer;
-
-    transition:.2s;
 }
 
-.filter-btn:hover,
-.filter-btn.active{
-    color:#fff;
-
-    border-color:var(--purple);
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--purple),
-            var(--purple-light)
-        );
+.filter.active,
+.filter:hover{
+    color:white;
+    border-color:#6d28d9;
+    background:linear-gradient(135deg,#6d28d9,#8b5cf6);
 }
 
 
-/* =========================================================
+/* =========================
    JOB GRID
-========================================================= */
-
-.jobs-grid{
+========================= */
+.jobs{
     display:grid;
-
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
-
-    gap:20px;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
 
-/* =========================================================
+/* =========================
    JOB CARD
-========================================================= */
-
+========================= */
 .job-card{
-    position:relative;
-    overflow:hidden;
-
-    padding:21px;
-
+    background:white;
     border:1px solid var(--border);
     border-radius:16px;
-
-    background:#fff;
-
-    box-shadow:
-        var(--shadow-sm);
-
-    transition:
-        transform .25s,
-        box-shadow .25s,
-        border-color .25s;
+    padding:20px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(59,23,109,.07);
+    transition:.25s;
 }
 
 .job-card::before{
     content:"";
-
     position:absolute;
-
-    left:0;
     top:0;
-
+    left:0;
     width:100%;
     height:4px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--purple),
-            var(--orange),
-            var(--gold)
-        );
+    background:linear-gradient(90deg,#6d28d9,#f97316,#f59e0b);
 }
 
 .job-card:hover{
-    transform:translateY(-6px);
-
-    border-color:#D8C3E9;
-
-    box-shadow:var(--shadow-hover);
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(59,23,109,.14);
 }
-
-
-/* =========================================================
-   BADGE
-========================================================= */
 
 .badge{
-    display:inline-flex;
-    align-items:center;
-    gap:4px;
-
-    padding:5px 10px;
-
-    margin-bottom:11px;
-
+    display:inline-block;
+    background:#fff0f4;
+    color:#e11d48;
+    border:1px solid #ffd1dd;
+    padding:4px 9px;
     border-radius:20px;
-
-    color:var(--red);
-
-    background:#FFF0F4;
-
-    border:1px solid #FFD1DD;
-
     font-size:10px;
-    font-weight:800;
+    font-weight:bold;
+    margin-bottom:10px;
 }
-
-.badge::before{
-    content:"●";
-    font-size:7px;
-}
-
-
-/* =========================================================
-   JOB CONTENT
-========================================================= */
 
 .job-card h3{
-    margin-bottom:11px;
-
-    color:var(--purple-deep);
-
+    color:#3b176d;
     font-size:17px;
-    line-height:1.4;
-    font-weight:800;
+    margin-bottom:10px;
 }
 
-.info{
-    color:var(--muted);
-
-    font-size:12.5px;
-
-    line-height:1.85;
-}
-
-.info strong{
-    color:var(--text);
-    font-weight:700;
-}
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.view-btn{
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    min-height:40px;
-
-    margin-top:15px;
-
-    padding:9px 17px;
-
-    border:none;
-    border-radius:9px;
-
-    color:#fff;
-
-    text-decoration:none;
-
+.job-info{
+    color:#766d82;
     font-size:12px;
-    font-weight:700;
+    line-height:1.9;
+}
 
+.job-info strong{
+    color:#30253e;
+}
+
+.details-btn{
+    margin-top:14px;
+    border:0;
+    border-radius:8px;
+    padding:10px 15px;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    background:linear-gradient(135deg,#6d28d9,#f97316);
     cursor:pointer;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--purple),
-            #7C3AED 55%,
-            var(--orange)
-        );
-
-    box-shadow:
-        0 5px 13px rgba(109,40,217,.18);
-
     transition:.2s;
 }
 
-.view-btn:hover{
+.details-btn:hover{
     transform:translateY(-2px);
-
-    box-shadow:
-        0 8px 18px rgba(109,40,217,.27);
+    box-shadow:0 6px 15px rgba(109,40,217,.25);
 }
 
 
-/* =========================================================
+/* =========================
    NO RESULT
-========================================================= */
-
-.no-results{
+========================= */
+.no-result{
     display:none;
-
-    padding:35px 20px;
-
     text-align:center;
-
+    padding:30px;
+    background:white;
     border-radius:15px;
-
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    color:var(--muted);
-
-    box-shadow:var(--shadow);
+    color:#766d82;
 }
 
 
-/* =========================================================
+/* =========================
    QUICK ACCESS
-========================================================= */
-
-.quick-section{
-    margin-top:38px;
-}
-
+========================= */
 .quick-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(4,minmax(0,1fr));
-
-    gap:16px;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
 .quick-card{
-    position:relative;
-    overflow:hidden;
-
-    display:block;
-
-    padding:21px 15px;
-
-    text-align:center;
-
-    text-decoration:none;
-
-    color:var(--purple-deep);
-
-    background:#fff;
-
+    background:white;
     border:1px solid var(--border);
     border-radius:15px;
-
-    box-shadow:
-        var(--shadow-sm);
-
+    padding:20px 10px;
+    text-align:center;
+    text-decoration:none;
+    color:#3b176d;
+    box-shadow:0 5px 16px rgba(59,23,109,.06);
     transition:.25s;
-}
-
-.quick-card::before{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    top:0;
-
-    width:100%;
-    height:3px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--purple),
-            var(--orange)
-        );
 }
 
 .quick-card:hover{
     transform:translateY(-5px);
-
-    box-shadow:var(--shadow);
-
-    border-color:#D8C3E9;
+    box-shadow:0 12px 25px rgba(59,23,109,.13);
 }
 
 .quick-icon{
+    width:50px;
+    height:50px;
+    margin:auto;
+    margin-bottom:9px;
     display:flex;
-
-    width:52px;
-    height:52px;
-
     align-items:center;
     justify-content:center;
-
-    margin:0 auto 10px;
-
     border-radius:14px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--purple-soft),
-            var(--gold-soft)
-        );
-
-    font-size:25px;
+    background:linear-gradient(135deg,#ede9fe,#ffedd5);
+    font-size:24px;
 }
 
 .quick-card strong{
-    font-size:14px;
-}
-
-
-/* =========================================================
-   INFO SECTION
-========================================================= */
-
-.info-section{
-    margin-top:35px;
-
-    padding:24px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fff,
-            #FFF9ED
-        );
-
-    border:1px solid var(--border);
-    border-radius:16px;
-
-    box-shadow:var(--shadow-sm);
-}
-
-.info-section h2{
-    color:var(--purple-deep);
-
-    font-size:20px;
-
-    margin-bottom:10px;
-}
-
-.info-section p{
-    color:var(--muted);
-
     font-size:13px;
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-    position:relative;
-    overflow:hidden;
-
-    padding:31px 15px;
-
-    text-align:center;
-
-    color:#fff;
-
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(249,115,22,.20),
-            transparent 25%
-        ),
-        linear-gradient(
-            135deg,
-            #241039,
-            #3B176D
-        );
+/* =========================
+   EXTRA SECTIONS
+========================= */
+.portal-sections{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
 }
 
-footer::before{
-    content:"";
+.portal-box{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:22px;
+    box-shadow:0 5px 18px rgba(59,23,109,.06);
+}
 
-    position:absolute;
+.portal-box h3{
+    color:#4c1d95;
+    margin-bottom:8px;
+}
 
-    width:150px;
-    height:150px;
+.portal-box p{
+    color:#766d82;
+    font-size:12px;
+}
 
-    left:-75px;
-    bottom:-85px;
+.portal-box button{
+    margin-top:12px;
+    border:0;
+    background:#f97316;
+    color:white;
+    padding:8px 13px;
+    border-radius:7px;
+    font-size:11px;
+    font-weight:bold;
+}
 
-    border-radius:50%;
 
+/* =========================
+   INFO
+========================= */
+.info-box{
+    margin-top:30px;
+    background:linear-gradient(135deg,#fff,#fff8eb);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:23px;
+}
+
+.info-box h2{
+    color:#4c1d95;
+    font-size:20px;
+    margin-bottom:7px;
+}
+
+.info-box p{
+    color:#766d82;
+    font-size:13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+footer{
     background:
-        rgba(255,193,7,.07);
+        radial-gradient(circle at 90% 0%,rgba(249,115,22,.2),transparent 25%),
+        linear-gradient(135deg,#24103b,#3b176d);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
 }
 
 .footer-logo{
-    position:relative;
-    z-index:2;
-
     font-size:18px;
-    font-weight:800;
+    font-weight:bold;
 }
 
 .footer-logo span{
-    color:#FFD166;
+    color:#ffd166;
 }
 
 footer p{
-    position:relative;
-    z-index:2;
-
-    margin-top:7px;
-
-    color:rgba(255,255,255,.80);
-
+    color:rgba(255,255,255,.8);
     font-size:12px;
+    margin-top:6px;
 }
 
 .footer-links{
-    position:relative;
-    z-index:2;
-
-    margin-top:11px;
+    margin-top:10px;
 }
 
 .footer-links a{
-    color:rgba(255,255,255,.92);
-
+    color:white;
     text-decoration:none;
-
     font-size:12px;
-
-    margin:0 8px;
-
-    transition:.2s;
+    margin:0 6px;
 }
 
 .footer-links a:hover{
-    color:#FFD166;
+    color:#ffd166;
 }
 
 
-/* =========================================================
+/* =========================
    MODAL
-========================================================= */
-
+========================= */
 .modal{
-    position:fixed;
-
-    inset:0;
-
-    z-index:2000;
-
     display:none;
-
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(25,10,40,.65);
     align-items:center;
     justify-content:center;
-
     padding:20px;
-
-    background:
-        rgba(30,15,45,.65);
-
-    backdrop-filter:blur(5px);
 }
 
 .modal.show{
     display:flex;
 }
 
-.modal-content{
+.modal-box{
     width:100%;
     max-width:500px;
-
-    max-height:90vh;
-
-    overflow-y:auto;
-
-    padding:25px;
-
+    background:white;
     border-radius:18px;
-
-    background:#fff;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.25);
-
-    animation:
-        modalIn .25s ease;
+    padding:24px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
 
-@keyframes modalIn{
-    from{
-        opacity:0;
-        transform:translateY(20px) scale(.97);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
-
-.modal-header{
+.modal-head{
     display:flex;
-
-    align-items:center;
     justify-content:space-between;
-
-    gap:15px;
-
-    margin-bottom:17px;
+    align-items:center;
+    margin-bottom:15px;
 }
 
-.modal-header h2{
-    color:var(--purple-deep);
-
+.modal-head h2{
+    color:#4c1d95;
     font-size:20px;
 }
 
-.close-modal{
-    width:35px;
-    height:35px;
-
-    border:none;
+.close{
+    width:34px;
+    height:34px;
+    border:0;
     border-radius:50%;
-
-    background:#F4ECFA;
-
-    color:var(--purple-deep);
-
+    background:#f1eafa;
+    color:#4c1d95;
     font-size:20px;
-
     cursor:pointer;
 }
 
 .modal-body{
-    color:var(--muted);
-
+    color:#766d82;
     font-size:13px;
-
-    line-height:1.8;
-}
-
-.modal-body p{
-    padding:5px 0;
-}
-
-.modal-body strong{
-    color:var(--text);
+    line-height:1.9;
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
-
+/* =========================
+   RESPONSIVE
+========================= */
 @media(max-width:900px){
 
-    .jobs-grid{
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
+    .jobs{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .quick-grid{
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .portal-sections{
+        grid-template-columns:1fr;
     }
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media(max-width:600px){
 
-    .top-header{
-        padding:21px 12px 20px;
+    .header{
+        padding:22px 10px;
     }
 
-    .logo{
+    .header h1{
         font-size:24px;
     }
 
-    .tagline{
-        font-size:11px;
-    }
-
-    .nav-container{
+    .nav{
         justify-content:flex-start;
     }
 
-    .nav-container a{
-        padding:13px 12px;
+    .nav a{
+        padding:12px 11px;
         font-size:11px;
     }
 
     .container{
-        padding:17px 10px 40px;
+        padding:18px 10px 40px;
     }
 
     .hero{
-        padding:25px 14px;
+        padding:25px 13px;
         border-radius:16px;
     }
 
-    .hero-icon{
-        width:48px;
-        height:48px;
-        font-size:24px;
-    }
-
-    .hero h1{
+    .hero h2{
         font-size:21px;
     }
 
     .hero p{
-        font-size:12px;
-        line-height:1.65;
+        font-size:11px;
     }
 
-    .search-box{
+    .search{
         flex-direction:column;
-        gap:8px;
     }
 
-    .search-box input{
-        width:100%;
-    }
-
-    .search-btn{
+    .search button{
         min-height:42px;
     }
 
     .section-title{
         font-size:18px;
-        margin-top:23px;
     }
 
-    .section-title::before{
-        height:25px;
-    }
-
-    .filter-buttons{
-        gap:7px;
-    }
-
-    .filter-btn{
-        padding:7px 11px;
-        font-size:11px;
-    }
-
-    .jobs-grid{
+    .jobs{
         grid-template-columns:1fr;
         gap:14px;
     }
 
     .job-card{
         padding:18px;
-        border-radius:14px;
-    }
-
-    .job-card h3{
-        font-size:16px;
-    }
-
-    .info{
-        font-size:12px;
     }
 
     .quick-grid{
-        grid-template-columns:
-            repeat(2,minmax(0,1fr));
-
+        grid-template-columns:repeat(2,1fr);
         gap:10px;
     }
 
     .quick-card{
-        padding:16px 8px;
-        border-radius:13px;
+        padding:16px 7px;
     }
 
     .quick-icon{
         width:45px;
         height:45px;
-        font-size:22px;
+        font-size:21px;
     }
 
     .quick-card strong{
-        font-size:12px;
-    }
-
-    .info-section{
-        padding:19px;
-    }
-
-    .info-section h2{
-        font-size:18px;
-    }
-
-    footer{
-        padding:27px 12px;
-    }
-
-    .footer-logo{
-        font-size:16px;
-    }
-
-    .footer-links a{
-        margin:0 5px;
+        font-size:11px;
     }
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
+/* =========================
+   SMALL PHONE
+========================= */
 @media(max-width:360px){
 
-    .logo{
-        font-size:22px;
+    .header h1{
+        font-size:21px;
     }
 
-    .nav-container a{
-        padding-left:10px;
-        padding-right:10px;
-    }
-
-    .hero h1{
-        font-size:19px;
-    }
-
-    .quick-grid{
-        gap:8px;
+    .nav a{
+        padding-left:9px;
+        padding-right:9px;
     }
 }
 
@@ -1238,65 +698,53 @@ footer p{
 <body>
 
 
-<!-- ======================================================
+<!-- =========================
      HEADER
-====================================================== -->
+========================= -->
 
-<header class="top-header">
+<header class="header" id="home">
 
-    <div class="logo">
+    <h1>
         NSD <span>Vishu</span> Result
-    </div>
+    </h1>
 
-    <div class="tagline">
+    <p>
         Latest Government Vacancy & Sarkari Job Updates
-    </div>
+    </p>
 
 </header>
 
 
-<!-- ======================================================
+<!-- =========================
      NAVBAR
-====================================================== -->
+========================= -->
 
 <nav class="navbar">
 
-    <div class="nav-container">
+    <div class="nav">
 
-        <a href="#home" class="active">
-            🏠 Home
-        </a>
+        <a href="#home" class="active">🏠 Home</a>
 
-        <a href="#jobs">
-            💼 Latest Jobs
-        </a>
+        <a href="#jobs">💼 Latest Jobs</a>
 
-        <a href="#vacancy">
-            📋 Vacancy
-        </a>
+        <a href="#vacancy">📋 Vacancy</a>
 
-        <a href="#admit">
-            🎫 Admit Card
-        </a>
+        <a href="#admit">🎫 Admit Card</a>
 
-        <a href="#results">
-            📊 Results
-        </a>
+        <a href="#results">📊 Results</a>
 
-        <a href="#answer">
-            🔑 Answer Key
-        </a>
+        <a href="#answer">🔑 Answer Key</a>
 
     </div>
 
 </nav>
 
 
-<!-- ======================================================
+<!-- =========================
      MAIN
-====================================================== -->
+========================= -->
 
-<main class="container" id="home">
+<main class="container">
 
 
 <!-- HERO -->
@@ -1307,22 +755,368 @@ footer p{
         📋
     </div>
 
-    <h1>
+    <h2>
         Latest Government Vacancy 2026
-    </h1>
+    </h2>
 
     <p>
         भारत में Latest Government Jobs और Sarkari Vacancy
         की जानकारी एक ही जगह प्राप्त करें।
     </p>
 
-    <div class="search-box">
+    <div class="search">
 
         <input
-            type="text"
             id="searchInput"
+            type="text"
             placeholder="Search Government Jobs..."
         >
 
-        <button
-  
+        <button onclick="searchJobs()">
+            🔍 Search
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JOB SECTION
+========================= -->
+
+<section id="jobs">
+
+    <h2 class="section-title">
+        🔥 Latest Government Vacancies
+    </h2>
+
+    <div class="filters">
+
+        <button class="filter active" data-filter="all">
+            All Jobs
+        </button>
+
+        <button class="filter" data-filter="ssc">
+            SSC
+        </button>
+
+        <button class="filter" data-filter="railway">
+            Railway
+        </button>
+
+        <button class="filter" data-filter="bank">
+            Banking
+        </button>
+
+        <button class="filter" data-filter="police">
+            Police
+        </button>
+
+        <button class="filter" data-filter="bihar">
+            Bihar Jobs
+        </button>
+
+    </div>
+
+
+    <div class="jobs" id="jobsGrid">
+
+
+        <!-- SSC -->
+
+        <article class="job-card"
+            data-category="ssc"
+            data-title="SSC Recruitment 2026">
+
+            <span class="badge">NEW</span>
+
+            <h3>SSC Recruitment 2026</h3>
+
+            <div class="job-info">
+
+                🏢 Staff Selection Commission
+
+                <br>
+
+                <strong>Qualification:</strong>
+                Graduation
+
+                <br>
+
+                <strong>Age Limit:</strong>
+                Check Official Notification
+
+                <br>
+
+                <strong>Last Date:</strong>
+                Check Official Notification
+
+            </div>
+
+            <button
+                class="details-btn"
+                onclick="showJob(
+                    'SSC Recruitment 2026',
+                    'Staff Selection Commission',
+                    'Graduation'
+                )">
+                View Details →
+            </button>
+
+        </article>
+
+
+        <!-- RAILWAY -->
+
+        <article class="job-card"
+            data-category="railway"
+            data-title="Railway Recruitment 2026">
+
+            <span class="badge">NEW</span>
+
+            <h3>Railway Recruitment 2026</h3>
+
+            <div class="job-info">
+
+                🚆 Railway Recruitment Board
+
+                <br>
+
+                <strong>Qualification:</strong>
+                10th / 12th / Graduation
+
+                <br>
+
+                <strong>Age Limit:</strong>
+                Check Official Notification
+
+                <br>
+
+                <strong>Last Date:</strong>
+                Check Official Notification
+
+            </div>
+
+            <button
+                class="details-btn"
+                onclick="showJob(
+                    'Railway Recruitment 2026',
+                    'Railway Recruitment Board',
+                    '10th / 12th / Graduation'
+                )">
+                View Details →
+            </button>
+
+        </article>
+
+
+        <!-- SSC CGL -->
+
+        <article class="job-card"
+            data-category="ssc"
+            data-title="SSC CGL Recruitment 2026">
+
+            <span class="badge">NEW</span>
+
+            <h3>SSC CGL Recruitment 2026</h3>
+
+            <div class="job-info">
+
+                🏢 Staff Selection Commission
+
+                <br>
+
+                <strong>Qualification:</strong>
+                Graduation
+
+                <br>
+
+                <strong>Age Limit:</strong>
+                Check Official Notification
+
+                <br>
+
+                <strong>Last Date:</strong>
+                Check Official Notification
+
+            </div>
+
+            <button
+                class="details-btn"
+                onclick="showJob(
+                    'SSC CGL Recruitment 2026',
+                    'Staff Selection Commission',
+                    'Graduation'
+                )">
+                View Details →
+            </button>
+
+        </article>
+
+
+        <!-- BIHAR -->
+
+        <article class="job-card"
+            data-category="bihar"
+            data-title="Bihar Government Vacancy 2026">
+
+            <span class="badge">NEW</span>
+
+            <h3>Bihar Government Vacancy 2026</h3>
+
+            <div class="job-info">
+
+                🏛️ Various Departments
+
+                <br>
+
+                <strong>Qualification:</strong>
+                Check Official Notification
+
+                <br>
+
+                <strong>Age Limit:</strong>
+                Check Official Notification
+
+                <br>
+
+                <strong>Last Date:</strong>
+                Check Official Notification
+
+            </div>
+
+            <button
+                class="details-btn"
+                onclick="showJob(
+                    'Bihar Government Vacancy 2026',
+                    'Various Departments',
+                    'Check Official Notification'
+                )">
+                View Details →
+            </button>
+
+        </article>
+
+
+        <!-- BANK -->
+
+        <article class="job-card"
+            data-category="bank"
+            data-title="Bank Recruitment 2026">
+
+            <span class="badge">NEW</span>
+
+            <h3>Bank Recruitment 2026</h3>
+
+            <div class="job-info">
+
+                🏦 Banking Departments
+
+                <br>
+
+                <strong>Qualification:</strong>
+                Graduation
+
+                <br>
+
+                <strong>Age Limit:</strong>
+                Check Official Notification
+
+                <br>
+
+                <strong>Last Date:</strong>
+                Check Official Notification
+
+            </div>
+
+            <button
+                class="details-btn"
+                onclick="showJob(
+                    'Bank Recruitment 2026',
+                    'Banking Departments',
+                    'Graduation'
+                )">
+                View Details →
+            </button>
+
+        </article>
+
+
+        <!-- POLICE -->
+
+        <article class="job-card"
+            data-category="police"
+            data-title="Police Recruitment 2026">
+
+            <span class="badge">NEW</span>
+
+            <h3>Police Recruitment 2026</h3>
+
+            <div class="job-info">
+
+                👮 Police Department
+
+                <br>
+
+                <strong>Qualification:</strong>
+                10th / 12th / Graduation
+
+                <br>
+
+                <strong>Age Limit:</strong>
+                Check Official Notification
+
+                <br>
+
+                <strong>Last Date:</strong>
+                Check Official Notification
+
+            </div>
+
+            <button
+                class="details-btn"
+                onclick="showJob(
+                    'Police Recruitment 2026',
+                    'Police Department',
+                    '10th / 12th / Graduation'
+                )">
+                View Details →
+            </button>
+
+        </article>
+
+    </div>
+
+
+    <div class="no-result" id="noResult">
+        🔎 No government jobs found.
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUICK ACCESS
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        ⚡ Quick Access
+    </h2>
+
+    <div class="quick-grid">
+
+        <a class="quick-card" href="#jobs">
+
+            <div class="quick-icon">📋</div>
+
+            <strong>Latest Vacancy</strong>
+
+        </a>
+
+
+        <a class="quick-card" href="#admit">
+
+            <div class="quick-icon">🎫</
