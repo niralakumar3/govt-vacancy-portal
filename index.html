@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NSD Vishu Result - Government Jobs</title>
+<title>NSD Vishu Result | Sarkari Job Portal</title>
+
+<meta name="description"
+content="NSD Vishu Result - Latest Government Jobs, Vacancy, Admit Card, Results and Answer Key Updates.">
 
 <style>
 
-/* =========================
-   BASIC
-========================= */
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 *{
     margin:0;
@@ -22,98 +25,1528 @@ html{
     scroll-behavior:smooth;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f8f5fb;
-    color:#30213d;
-}
-
-
-/* =========================
-   COLORS
-========================= */
-
 :root{
-    --dark:#29113f;
-    --purple:#6525c7;
-    --purple2:#8b5cf6;
-    --orange:#f97316;
-    --gold:#f59e0b;
-    --cream:#fff8e8;
-    --white:#fff;
-    --text:#30213d;
-    --muted:#756b82;
-    --green:#16a34a;
-    --red:#e11d48;
-    --border:#e6dcef;
+
+    --purple-dark:#28103D;
+    --purple-deep:#3B176D;
+    --purple:#6D28D9;
+    --purple-light:#8B5CF6;
+
+    --orange-dark:#C2410C;
+    --orange:#F97316;
+    --orange-light:#FB923C;
+    --gold:#F59E0B;
+
+    --cream:#FFFDF7;
+    --cream-dark:#FFF6E5;
+    --page:#F7F4FB;
+
+    --white:#FFFFFF;
+
+    --text:#2E2340;
+    --muted:#756B82;
+
+    --green:#16A34A;
+    --red:#E11D48;
+
+    --border:#E7DDF1;
+
+    --shadow:
+        0 8px 25px rgba(59,23,109,.09);
+
+    --shadow-hover:
+        0 15px 35px rgba(59,23,109,.16);
+}
+
+body{
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--page);
+    color:var(--text);
+
+    line-height:1.6;
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
-.header{
-    background:linear-gradient(135deg,#29113f,#5b21b6,#8b5cf6);
-    color:white;
-    text-align:center;
-    padding:25px 15px;
+.top-header{
+
     position:relative;
+
     overflow:hidden;
+
+    text-align:center;
+
+    color:#fff;
+
+    padding:28px 15px 25px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(249,115,22,.30),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #28103D,
+            #4C1D95 50%,
+            #7C3AED
+        );
+
+    box-shadow:
+        0 5px 20px rgba(40,16,61,.20);
 }
 
-.header:after{
+.top-header::before{
+
     content:"";
+
     position:absolute;
-    width:160px;
-    height:160px;
+
+    width:190px;
+    height:190px;
+
     border-radius:50%;
-    right:-60px;
-    top:-80px;
-    background:rgba(249,115,22,.18);
+
+    right:-70px;
+    top:-105px;
+
+    background:
+        rgba(255,255,255,.07);
+}
+
+.top-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    left:-55px;
+    bottom:-75px;
+
+    background:
+        rgba(249,115,22,.12);
 }
 
 .logo{
-    font-size:27px;
-    font-weight:800;
+
     position:relative;
     z-index:2;
+
+    font-size:28px;
+
+    font-weight:800;
 }
 
 .logo span{
-    color:#ffd166;
+    color:#FFD166;
 }
 
 .tagline{
-    font-size:12px;
-    margin-top:6px;
+
     position:relative;
     z-index:2;
-    opacity:.9;
+
+    margin-top:5px;
+
+    font-size:12px;
+
+    color:
+        rgba(255,255,255,.90);
 }
 
 
-/* =========================
+/* =========================================================
    NAVBAR
-========================= */
+========================================================= */
 
 .navbar{
-    background:#29113f;
+
     position:sticky;
+
     top:0;
+
     z-index:999;
-    box-shadow:0 3px 12px rgba(0,0,0,.18);
+
+    background:
+        var(--purple-dark);
+
+    box-shadow:
+        0 4px 15px rgba(40,16,61,.20);
 }
 
-.nav{
+.nav-container{
+
     max-width:1200px;
+
     margin:auto;
+
     display:flex;
+
     justify-content:center;
+
     overflow-x:auto;
+
+    scrollbar-width:none;
 }
 
-.nav a{
-    color:white;
+.nav-container::-webkit-scrollbar{
+    display:none;
+}
+
+.nav-container a{
+
+    position:relative;
+
+    padding:15px 16px;
+
+    color:#fff;
+
     text-decoration:none;
-    padding:14
+
+    white-space:nowrap;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.nav-container a:hover,
+.nav-container a.active{
+
+    background:#4C1D95;
+
+    color:#FFD166;
+}
+
+.nav-container a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:15%;
+    right:15%;
+    bottom:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:
+        var(--gold);
+
+    transform:
+        scaleX(0);
+
+    transition:.25s;
+}
+
+.nav-container a:hover::after,
+.nav-container a.active::after{
+
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:
+        28px 16px 55px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:
+        34px 20px;
+
+    margin-bottom:30px;
+
+    border-radius:20px;
+
+    border:
+        1px solid #E8DDF2;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #FFFDF8 50%,
+            #FFF2D9
+        );
+
+    box-shadow:
+        var(--shadow);
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    border-radius:50%;
+
+    right:-50px;
+    top:-75px;
+
+    background:
+        rgba(109,40,217,.08);
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    left:-35px;
+    bottom:-55px;
+
+    background:
+        rgba(249,115,22,.10);
+}
+
+.hero-icon{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+
+    width:56px;
+    height:56px;
+
+    align-items:center;
+    justify-content:center;
+
+    margin:
+        0 auto 10px;
+
+    border-radius:16px;
+
+    color:#fff;
+
+    font-size:28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--purple-light)
+        );
+
+    box-shadow:
+        0 7px 20px rgba(109,40,217,.25);
+}
+
+.hero h1{
+
+    position:relative;
+    z-index:2;
+
+    margin-bottom:7px;
+
+    color:
+        var(--purple-deep);
+
+    font-size:27px;
+
+    font-weight:800;
+}
+
+.hero p{
+
+    position:relative;
+    z-index:2;
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:
+        var(--muted);
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box{
+
+    display:flex;
+
+    gap:10px;
+
+    max-width:720px;
+
+    margin:
+        22px auto 0;
+
+    position:relative;
+
+    z-index:3;
+}
+
+.search-box input{
+
+    flex:1;
+
+    min-width:0;
+
+    padding:
+        13px 15px;
+
+    border:
+        1px solid #DCCCEB;
+
+    border-radius:10px;
+
+    outline:none;
+
+    background:#fff;
+
+    color:var(--text);
+
+    font-size:13px;
+
+    box-shadow:
+        0 3px 10px rgba(59,23,109,.05);
+}
+
+.search-box input:focus{
+
+    border-color:
+        var(--purple);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(109,40,217,.10);
+}
+
+.search-btn{
+
+    border:none;
+
+    padding:
+        0 19px;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--orange)
+        );
+
+    transition:.2s;
+}
+
+.search-btn:hover{
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 16px
+        rgba(109,40,217,.20);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    margin:
+        28px 0 18px;
+
+    color:
+        var(--purple-deep);
+
+    font-size:21px;
+
+    font-weight:800;
+}
+
+.section-title::before{
+
+    content:"";
+
+    width:5px;
+
+    height:29px;
+
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--orange),
+            var(--gold)
+        );
+}
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+.filter-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin-bottom:20px;
+}
+
+.filter-btn{
+
+    padding:
+        8px 14px;
+
+    border:
+        1px solid #DFD2EA;
+
+    border-radius:30px;
+
+    background:#fff;
+
+    color:
+        var(--purple-deep);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+
+    color:#fff;
+
+    border-color:
+        var(--purple);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--purple-light)
+        );
+}
+
+
+/* =========================================================
+   JOB GRID
+========================================================= */
+
+.jobs-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:20px;
+}
+
+
+/* =========================================================
+   JOB CARD
+========================================================= */
+
+.job-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:21px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:16px;
+
+    background:#fff;
+
+    box-shadow:
+        0 5px 18px
+        rgba(59,23,109,.07);
+
+    transition:
+        transform .25s,
+        box-shadow .25s,
+        border-color .25s;
+}
+
+.job-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--orange),
+            var(--gold)
+        );
+}
+
+.job-card:hover{
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        #D8C3E9;
+
+    box-shadow:
+        var(--shadow-hover);
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    padding:
+        5px 10px;
+
+    margin-bottom:11px;
+
+    border-radius:20px;
+
+    color:
+        var(--red);
+
+    background:
+        #FFF0F4;
+
+    border:
+        1px solid #FFD1DD;
+
+    font-size:10px;
+
+    font-weight:800;
+}
+
+.badge::before{
+
+    content:"●";
+
+    font-size:7px;
+}
+
+
+/* =========================================================
+   JOB CONTENT
+========================================================= */
+
+.job-card h3{
+
+    margin-bottom:11px;
+
+    color:
+        var(--purple-deep);
+
+    font-size:17px;
+
+    line-height:1.4;
+
+    font-weight:800;
+}
+
+.info{
+
+    color:
+        var(--muted);
+
+    font-size:12.5px;
+
+    line-height:1.85;
+}
+
+.info strong{
+
+    color:
+        var(--text);
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.view-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:40px;
+
+    margin-top:15px;
+
+    padding:
+        9px 17px;
+
+    border:none;
+
+    border-radius:9px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            #7C3AED 55%,
+            var(--orange)
+        );
+
+    box-shadow:
+        0 5px 13px
+        rgba(109,40,217,.18);
+
+    transition:.2s;
+}
+
+.view-btn:hover{
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(109,40,217,.27);
+}
+
+
+/* =========================================================
+   EMPTY MESSAGE
+========================================================= */
+
+.no-results{
+
+    display:none;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:#fff;
+
+    border:
+        1px solid var(--border);
+
+    color:var(--muted);
+
+    box-shadow:var(--shadow);
+}
+
+
+/* =========================================================
+   QUICK ACCESS
+========================================================= */
+
+.quick-section{
+
+    margin-top:38px;
+}
+
+.quick-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:16px;
+}
+
+.quick-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:block;
+
+    padding:21px 15px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:
+        var(--purple-deep);
+
+    background:#fff;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:15px;
+
+    box-shadow:
+        0 5px 16px
+        rgba(59,23,109,.06);
+
+    transition:.25s;
+}
+
+.quick-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--orange)
+        );
+}
+
+.quick-card:hover{
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow);
+
+    border-color:
+        #D8C3E9;
+}
+
+.quick-icon{
+
+    display:flex;
+
+    width:52px;
+    height:52px;
+
+    align-items:center;
+    justify-content:center;
+
+    margin:
+        0 auto 10px;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple-soft),
+            var(--gold-soft)
+        );
+
+    font-size:25px;
+}
+
+.quick-card strong{
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   INFO SECTION
+========================================================= */
+
+.info-section{
+
+    margin-top:35px;
+
+    padding:24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #FFF9ED
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius:16px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+.info-section h2{
+
+    color:
+        var(--purple-deep);
+
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.info-section p{
+
+    color:
+        var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:
+        31px 15px;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(249,115,22,.20),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #28103D,
+            #3B176D
+        );
+}
+
+footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    left:-75px;
+    bottom:-85px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,193,7,.07);
+}
+
+.footer-logo{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:18px;
+
+    font-weight:800;
+}
+
+.footer-logo span{
+
+    color:
+        #FFD166;
+}
+
+footer p{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:7px;
+
+    color:
+        rgba(255,255,255,.80);
+
+    font-size:12px;
+}
+
+.footer-links{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:11px;
+}
+
+.footer-links a{
+
+    color:
+        rgba(255,255,255,.92);
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    margin:0 8px;
+
+    transition:.2s;
+}
+
+.footer-links a:hover{
+
+    color:
+        #FFD166;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(30,15,45,.65);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+.modal.show{
+
+    display:flex;
+}
+
+.modal-content{
+
+    width:100%;
+
+    max-width:500px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.25);
+
+    animation:
+        modalIn .25s ease;
+}
+
+@keyframes modalIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.modal-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:17px;
+}
+
+.modal-header h2{
+
+    color:
+        var(--purple-deep);
+
+    font-size:20px;
+}
+
+.close-modal{
+
+    width:35px;
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        #F4ECFA;
+
+    color:
+        var(--purple-deep);
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+.modal-body{
+
+    color:
+        var(--muted);
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.modal-body strong{
+
+    color:
+        var(--text);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .jobs-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .quick-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .top-header{
+
+        padding:
+            21px 12px 20px;
+    }
+
+    .logo{
+
+        font-size:24px;
+    }
+
+    .tagline{
+
+        font-size:11px;
+    }
+
+
+    .nav-container{
+
+        justify-content:flex-start;
+    }
+
+    .nav-container a{
+
+        padding:
+            13px 12px;
+
+        font-size:11px;
+    }
+
+
+    .container{
+
+        padding:
+            17px 10px 40px;
+    }
+
+
+    .hero{
+
+        padding:
+            25px 14px;
+
+        border-radius:16px;
+    }
+
+    .hero-icon{
+
+        width:48px;
+        height:48px;
+
+        font-size:24px;
+    }
+
+    .hero h1{
+
+        font-size:21px;
+    }
+
+    .hero p{
+
+        font-size:12px;
+
+        line-height:1.65;
+    }
+
+
+    .search-box{
+
+        flex-direction:column;
+
+        gap:8px;
+    }
+
+    .search-box input{
+
+        width:100%;
+    }
+
+    .search-btn{
+
+        min-height:42px;
+    }
+
+
+    .section-title{
+
+        font-size:18px;
+
+        margin-top:23px;
+    }
+
+    .section-title::before{
+
+        height:25px;
+    }
+
+
+    .filter-buttons{
+
+        gap:7px;
+    }
+
+    .filter-btn{
+
+        padding:
+            7px 11px;
+
+        font-size:11px;
+    }
+
+
+    .jobs-grid{
+
+        grid-template-columns:1fr;
+
+        gap:14px;
+    }
+
+    .job-card{
+
+        padding:18px;
+
+        border-radius:14px;
+    }
+
+    .job-card h3{
+
+        font-size:16px;
+    }
+
+    .info{
+
+        font-size:12px;
+    }
+
+
+    .quick-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:10px;
+    }
+
+    .quick-card{
+
+        padding:
+            16px 8px;
+
+        border-radius:13px;
+    }
+
+    .quick-icon{
+
+        width:45px;
+        height:45px;
+
+        font-size:22px;
+    }
+
+    .quick-card strong{
+
+        font-size:12px;
+    }
+
+
+    .info-section{
+
+        padding:19px;
+    }
+
+    .info-section h2{
+
+        font-size:18px;
+    }
+
+
+    footer{
+
+        padding:
+            27px 12px;
+    }
+
+    .footer-logo{
+
+        font-size:16px;
+    }
+
+    .footer-links a{
+
+        margin:0 5px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:360px){
+
+    .logo{
+
+        font-size:22px;
+    }
+
+    .nav-container a{
+
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .hero h1{
+
+        font-size:19px;
+    }
+
+    .quick-grid{
+
+        gap:8px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     HEADER
+======================================================= -->
+
+<header class="top-header">
+
+    <div class="logo">
+        NSD <span>Vishu</span> Result
+    </div>
+
+    <div class="tagline">
+        Latest Government Vacancy & Sarkari Job Updates
+    </div>
+
+</header>
+
+
+<!-- ======================================================
+     NAVBAR
+======================================================= -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="active">
+            🏠 Home
+        </a>
+
+        <a href="#jobs">
+            💼 Latest Jobs
+        </a>
+
+        <a href="#vacancy">
+            📋 Vacancy
+        </a>
+
+        <a href="#admit">
+            🎫 Admit Card
+        </a>
+
+        <a href="#results">
+            📊 Results
+        </a>
+
+        <a href="#answer">
+            🔑 Answer Key
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- ======================================================
+     MAIN
+=====================
