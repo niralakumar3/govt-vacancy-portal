@@ -121,16 +121,30 @@
   padding: 0;
 }
 
+<style>
+/* ================================
+   NSD VISHU RESULT - PREMIUM UI
+================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  --primary: #0b5ed7;
-  --primary-dark: #073b8f;
-  --accent: #ffb000;
-  --bg: #f4f7fb;
+  --blue: #1268d4;
+  --blue-dark: #073b8f;
+  --purple: #6d28d9;
+  --orange: #ff9800;
+  --green: #0f9d58;
+  --red: #e53935;
+  --cyan: #0891b2;
+  --bg: #f4f7fc;
   --text: #172b4d;
   --muted: #64748b;
   --white: #ffffff;
-  --border: #e2e8f0;
-  --success: #16a34a;
+  --border: #dce4ef;
 }
 
 html {
@@ -144,12 +158,428 @@ body {
   line-height: 1.6;
 }
 
-/* TOP HEADER */
+/* ================================
+   HEADER
+================================ */
+
 header {
-  background: linear-gradient(135deg, #073b8f, #0b5ed7);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,.18), transparent 25%),
+    radial-gradient(circle at 85% 10%, rgba(255,193,7,.18), transparent 25%),
+    linear-gradient(135deg, #062b73, #1268d4, #5b21b6);
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 
+.topbar {
+  background: rgba(0,0,0,.20);
+  padding: 9px 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header-main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 18px 28px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-shadow: 0 3px 12px rgba(0,0,0,.18);
+}
+
+.logo span {
+  color: #ffd600;
+}
+
+.tagline {
+  margin-top: 6px;
+  font-size: 17px;
+  opacity: .95;
+}
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-box {
+  max-width: 720px;
+  margin: 22px auto 0;
+  display: flex;
+  background: white;
+  padding: 5px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.20);
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.search-box input::placeholder {
+  color: #94a3b8;
+}
+
+.search-box button {
+  padding: 0 25px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffb300, #ff7a00);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255,152,0,.35);
+  transition: .25s;
+}
+
+.search-box button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav {
+  background: rgba(4,35,88,.96);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0,0,0,.18);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  font-weight: 700;
+  border-radius: 9px;
+  transition: .25s;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, #1268d4, #7c3aed);
+  transform: translateY(-1px);
+}
+
+/* ================================
+   MAIN
+================================ */
+
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 25px 16px 55px;
+}
+
+/* ================================
+   NOTICE
+================================ */
+
+.notice {
+  background: linear-gradient(135deg, #fff8df, #fff1c2);
+  border-left: 5px solid var(--orange);
+  padding: 15px 18px;
+  margin-bottom: 23px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(18,104,212,.10), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(109,40,217,.10), transparent 30%),
+    white;
+  padding: 42px 22px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(15,23,42,.08);
+  margin-bottom: 30px;
+}
+
+.hero h1,
+.hero h2 {
+  color: var(--blue-dark);
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* ================================
+   SECTION TITLES
+================================ */
+
+.section-title {
+  background: linear-gradient(135deg, #1268d4, #5b21b6);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 13px;
+  margin: 30px 0 17px;
+  font-size: 23px;
+  font-weight: 800;
+  box-shadow: 0 7px 20px rgba(18,104,212,.20);
+}
+
+/* ================================
+   CARDS
+================================ */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card,
+.job-card,
+.panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 22px;
+  box-shadow: 0 5px 18px rgba(15,23,42,.06);
+  transition: .25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before,
+.job-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #1268d4,
+    #7c3aed,
+    #ff9800,
+    #0f9d58
+  );
+}
+
+.card:hover,
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15,23,42,.13);
+}
+
+/* ================================
+   HEADINGS
+================================ */
+
+h2 {
+  color: var(--blue-dark);
+}
+
+h3 {
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+
+/* ================================
+   JOB LABELS
+================================ */
+
+.new,
+.badge,
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.new {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.tag {
+  background: #fff3cd;
+  color: #a16207;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+button,
+.btn,
+.card a,
+.job-card a {
+  display: inline-block;
+  background: linear-gradient(135deg, #0f9d58, #087f46);
+  color: white;
+  border: none;
+  padding: 11px 19px;
+  border-radius: 9px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .25s;
+  box-shadow: 0 4px 12px rgba(15,157,88,.20);
+}
+
+button:hover,
+.btn:hover,
+.card a:hover,
+.job-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(15,157,88,.25);
+}
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+  transition: .2s;
+}
+
+/* ================================
+   PANELS
+================================ */
+
+.panel {
+  margin-bottom: 20px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  background: linear-gradient(135deg, #061d45, #102a56, #4c1d95);
+  color: white;
+  text-align: center;
+  padding: 30px 18px;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #ffd600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .tagline {
+    font-size: 15px;
+  }
+
+  .header-main {
+    padding: 24px 14px;
+  }
+
+  .search-box {
+    margin-top: 18px;
+    padding: 4px;
+  }
+
+  .search-box input {
+    padding: 13px 12px;
+    font-size: 15px;
+  }
+
+  .search-box button {
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  nav {
+    padding: 7px;
+    gap: 4px;
+  }
+
+  nav a {
+    width: 48%;
+    text-align: center;
+    padding: 11px 5px;
+    font-size: 15px;
+  }
+
+  main {
+    padding: 18px 12px 40px;
+  }
+
+  .hero {
+    padding: 29px 16px;
+    border-radius: 16px;
+  }
+
+  .hero h1,
+  .hero h2 {
+    font-size: 27px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    padding: 13px 15px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card,
+  .job-card,
+  .panel {
+    padding: 18px;
+  }
+}
+</style>
 .topbar {
   background: rgba(0, 0, 0, 0.18);
   padding: 9px 12px;
