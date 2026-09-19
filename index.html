@@ -1,727 +1,1552 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NSD Vishu Result | Latest Government Jobs 2026</title>
+<title>NSD Vishu Result | Sarkari Job Portal</title>
 
-<meta name="description" content="NSD Vishu Result पर Latest Government Jobs, Sarkari Vacancy, Admit Card, Results और Answer Key की जानकारी पाएं।">
+<meta name="description"
+content="NSD Vishu Result - Latest Government Jobs, Vacancy, Admit Card, Results and Answer Key Updates.">
 
 <style>
 
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --purple-dark:#28103D;
+    --purple-deep:#3B176D;
+    --purple:#6D28D9;
+    --purple-light:#8B5CF6;
+
+    --orange-dark:#C2410C;
+    --orange:#F97316;
+    --orange-light:#FB923C;
+    --gold:#F59E0B;
+
+    --cream:#FFFDF7;
+    --cream-dark:#FFF6E5;
+    --page:#F7F4FB;
+
+    --white:#FFFFFF;
+
+    --text:#2E2340;
+    --muted:#756B82;
+
+    --green:#16A34A;
+    --red:#E11D48;
+
+    --border:#E7DDF1;
+
+    --shadow:
+        0 8px 25px rgba(59,23,109,.09);
+
+    --shadow-hover:
+        0 15px 35px rgba(59,23,109,.16);
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f7fb;
-  color:#172b4d;
-  line-height:1.6;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--page);
+    color:var(--text);
+
+    line-height:1.6;
 }
 
-/* TOP BAR */
-.topbar{
-  background:linear-gradient(90deg,#061f4a,#0b3d91,#0066ff);
-  color:#fff;
-  text-align:center;
-  padding:10px 12px;
-  font-size:14px;
-  font-weight:bold;
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.top-header{
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    color:#fff;
+
+    padding:28px 15px 25px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(249,115,22,.30),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #28103D,
+            #4C1D95 50%,
+            #7C3AED
+        );
+
+    box-shadow:
+        0 5px 20px rgba(40,16,61,.20);
 }
 
-/* HEADER */
-header{
-  background:linear-gradient(135deg,#005bea,#00c6fb);
-  color:#fff;
-  text-align:center;
-  padding:38px 15px;
+.top-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:190px;
+    height:190px;
+
+    border-radius:50%;
+
+    right:-70px;
+    top:-105px;
+
+    background:
+        rgba(255,255,255,.07);
+}
+
+.top-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    left:-55px;
+    bottom:-75px;
+
+    background:
+        rgba(249,115,22,.12);
 }
 
 .logo{
-  font-size:40px;
-  font-weight:800;
+
+    position:relative;
+    z-index:2;
+
+    font-size:28px;
+
+    font-weight:800;
 }
 
 .logo span{
-  color:#ffe600;
+    color:#FFD166;
 }
 
 .tagline{
-  margin-top:7px;
-  font-size:17px;
+
+    position:relative;
+    z-index:2;
+
+    margin-top:5px;
+
+    font-size:12px;
+
+    color:
+        rgba(255,255,255,.90);
 }
 
-/* NAVIGATION */
-nav{
-  background:#062b63;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:5px;
-  padding:10px;
-  position:sticky;
-  top:0;
-  z-index:999;
-  box-shadow:0 4px 15px rgba(0,0,0,.2);
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    background:
+        var(--purple-dark);
+
+    box-shadow:
+        0 4px 15px rgba(40,16,61,.20);
 }
 
-nav a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  padding:11px 17px;
-  border-radius:8px;
-  transition:.2s;
+.nav-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
 }
 
-nav a:hover{
-  background:#00a8ff;
+.nav-container::-webkit-scrollbar{
+    display:none;
 }
 
-/* MAIN */
-main{
-  max-width:1150px;
-  margin:auto;
-  padding:25px 15px 50px;
+.nav-container a{
+
+    position:relative;
+
+    padding:15px 16px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.25s;
 }
 
-/* HERO */
+.nav-container a:hover,
+.nav-container a.active{
+
+    background:#4C1D95;
+
+    color:#FFD166;
+}
+
+.nav-container a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:15%;
+    right:15%;
+    bottom:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:
+        var(--gold);
+
+    transform:
+        scaleX(0);
+
+    transition:.25s;
+}
+
+.nav-container a:hover::after,
+.nav-container a.active::after{
+
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:
+        28px 16px 55px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero{
-  background:linear-gradient(135deg,#fff,#e8f6ff);
-  border:1px solid #d7e7f5;
-  border-radius:18px;
-  padding:35px 20px;
-  text-align:center;
-  box-shadow:0 8px 25px rgba(0,60,120,.08);
-  margin-bottom:25px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:
+        34px 20px;
+
+    margin-bottom:30px;
+
+    border-radius:20px;
+
+    border:
+        1px solid #E8DDF2;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #FFFDF8 50%,
+            #FFF2D9
+        );
+
+    box-shadow:
+        var(--shadow);
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    border-radius:50%;
+
+    right:-50px;
+    top:-75px;
+
+    background:
+        rgba(109,40,217,.08);
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    left:-35px;
+    bottom:-55px;
+
+    background:
+        rgba(249,115,22,.10);
+}
+
+.hero-icon{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+
+    width:56px;
+    height:56px;
+
+    align-items:center;
+    justify-content:center;
+
+    margin:
+        0 auto 10px;
+
+    border-radius:16px;
+
+    color:#fff;
+
+    font-size:28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--purple-light)
+        );
+
+    box-shadow:
+        0 7px 20px rgba(109,40,217,.25);
 }
 
 .hero h1{
-  font-size:35px;
-  color:#082c68;
-  margin-bottom:8px;
+
+    position:relative;
+    z-index:2;
+
+    margin-bottom:7px;
+
+    color:
+        var(--purple-deep);
+
+    font-size:27px;
+
+    font-weight:800;
 }
 
 .hero p{
-  font-size:17px;
-  color:#526581;
+
+    position:relative;
+    z-index:2;
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:
+        var(--muted);
+
+    font-size:14px;
 }
 
-/* SEARCH */
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
 .search-box{
-  display:flex;
-  gap:10px;
-  margin-bottom:20px;
+
+    display:flex;
+
+    gap:10px;
+
+    max-width:720px;
+
+    margin:
+        22px auto 0;
+
+    position:relative;
+
+    z-index:3;
 }
 
 .search-box input{
-  flex:1;
-  padding:14px;
-  border:2px solid #d5dfeb;
-  border-radius:10px;
-  font-size:16px;
-  outline:none;
+
+    flex:1;
+
+    min-width:0;
+
+    padding:
+        13px 15px;
+
+    border:
+        1px solid #DCCCEB;
+
+    border-radius:10px;
+
+    outline:none;
+
+    background:#fff;
+
+    color:var(--text);
+
+    font-size:13px;
+
+    box-shadow:
+        0 3px 10px rgba(59,23,109,.05);
 }
 
 .search-box input:focus{
-  border-color:#007bff;
+
+    border-color:
+        var(--purple);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(109,40,217,.10);
 }
 
-.search-box button{
-  border:0;
-  background:linear-gradient(135deg,#0066ff,#00a8ff);
-  color:#fff;
-  padding:0 25px;
-  border-radius:10px;
-  font-weight:bold;
-  cursor:pointer;
+.search-btn{
+
+    border:none;
+
+    padding:
+        0 19px;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--orange)
+        );
+
+    transition:.2s;
 }
 
-/* NOTICE */
-.notice{
-  background:linear-gradient(135deg,#fff9db,#fff1ad);
-  border-left:5px solid #ffc107;
-  padding:15px;
-  border-radius:10px;
-  margin-bottom:25px;
-  color:#654d00;
+.search-btn:hover{
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 16px
+        rgba(109,40,217,.20);
 }
 
-/* SECTION */
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
 .section-title{
-  color:#082c68;
-  font-size:28px;
-  margin:25px 0 15px;
-  border-left:6px solid #00a8ff;
-  padding-left:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    margin:
+        28px 0 18px;
+
+    color:
+        var(--purple-deep);
+
+    font-size:21px;
+
+    font-weight:800;
 }
 
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+.section-title::before{
+
+    content:"";
+
+    width:5px;
+
+    height:29px;
+
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--orange),
+            var(--gold)
+        );
 }
 
-.card{
-  background:#fff;
-  border:1px solid #dce6f0;
-  border-radius:16px;
-  padding:20px;
-  box-shadow:0 5px 18px rgba(0,0,0,.07);
-  transition:.25s;
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+.filter-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin-bottom:20px;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 28px rgba(0,0,0,.13);
+.filter-btn{
+
+    padding:
+        8px 14px;
+
+    border:
+        1px solid #DFD2EA;
+
+    border-radius:30px;
+
+    background:#fff;
+
+    color:
+        var(--purple-deep);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
 }
+
+.filter-btn:hover,
+.filter-btn.active{
+
+    color:#fff;
+
+    border-color:
+        var(--purple);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--purple-light)
+        );
+}
+
+
+/* =========================================================
+   JOB GRID
+========================================================= */
+
+.jobs-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:20px;
+}
+
+
+/* =========================================================
+   JOB CARD
+========================================================= */
+
+.job-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:21px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:16px;
+
+    background:#fff;
+
+    box-shadow:
+        0 5px 18px
+        rgba(59,23,109,.07);
+
+    transition:
+        transform .25s,
+        box-shadow .25s,
+        border-color .25s;
+}
+
+.job-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--orange),
+            var(--gold)
+        );
+}
+
+.job-card:hover{
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        #D8C3E9;
+
+    box-shadow:
+        var(--shadow-hover);
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
 
 .badge{
-  display:inline-block;
-  background:#ff3158;
-  color:#fff;
-  padding:3px 9px;
-  border-radius:20px;
-  font-size:11px;
-  font-weight:bold;
-  margin-bottom:8px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    padding:
+        5px 10px;
+
+    margin-bottom:11px;
+
+    border-radius:20px;
+
+    color:
+        var(--red);
+
+    background:
+        #FFF0F4;
+
+    border:
+        1px solid #FFD1DD;
+
+    font-size:10px;
+
+    font-weight:800;
 }
 
-.card h3{
-  color:#082c68;
-  font-size:20px;
-  margin-bottom:8px;
+.badge::before{
+
+    content:"●";
+
+    font-size:7px;
 }
 
-.card p{
-  color:#526581;
-  margin:5px 0;
+
+/* =========================================================
+   JOB CONTENT
+========================================================= */
+
+.job-card h3{
+
+    margin-bottom:11px;
+
+    color:
+        var(--purple-deep);
+
+    font-size:17px;
+
+    line-height:1.4;
+
+    font-weight:800;
 }
 
-.card strong{
-  color:#172b4d;
+.info{
+
+    color:
+        var(--muted);
+
+    font-size:12.5px;
+
+    line-height:1.85;
 }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:13px;
-  background:linear-gradient(135deg,#00a651,#00c853);
-  color:#fff;
-  text-decoration:none;
-  padding:11px 18px;
-  border-radius:8px;
-  font-weight:bold;
-  transition:.2s;
+.info strong{
+
+    color:
+        var(--text);
+
+    font-weight:700;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.view-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:40px;
+
+    margin-top:15px;
+
+    padding:
+        9px 17px;
+
+    border:none;
+
+    border-radius:9px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            #7C3AED 55%,
+            var(--orange)
+        );
+
+    box-shadow:
+        0 5px 13px
+        rgba(109,40,217,.18);
+
+    transition:.2s;
 }
 
-/* INFO */
-.info-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-  margin-top:30px;
+.view-btn:hover{
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(109,40,217,.27);
 }
 
-.panel{
-  background:#fff;
-  border:1px solid #dce6f0;
-  border-radius:16px;
-  padding:22px;
-  box-shadow:0 5px 18px rgba(0,0,0,.06);
+
+/* =========================================================
+   EMPTY MESSAGE
+========================================================= */
+
+.no-results{
+
+    display:none;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:#fff;
+
+    border:
+        1px solid var(--border);
+
+    color:var(--muted);
+
+    box-shadow:var(--shadow);
 }
 
-.panel h2{
-  color:#0066ff;
-  margin-bottom:8px;
+
+/* =========================================================
+   QUICK ACCESS
+========================================================= */
+
+.quick-section{
+
+    margin-top:38px;
 }
 
-.panel p{
-  color:#526581;
+.quick-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:16px;
 }
 
-/* FOOTER */
+.quick-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:block;
+
+    padding:21px 15px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:
+        var(--purple-deep);
+
+    background:#fff;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:15px;
+
+    box-shadow:
+        0 5px 16px
+        rgba(59,23,109,.06);
+
+    transition:.25s;
+}
+
+.quick-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--orange)
+        );
+}
+
+.quick-card:hover{
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow);
+
+    border-color:
+        #D8C3E9;
+}
+
+.quick-icon{
+
+    display:flex;
+
+    width:52px;
+    height:52px;
+
+    align-items:center;
+    justify-content:center;
+
+    margin:
+        0 auto 10px;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple-soft),
+            var(--gold-soft)
+        );
+
+    font-size:25px;
+}
+
+.quick-card strong{
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   INFO SECTION
+========================================================= */
+
+.info-section{
+
+    margin-top:35px;
+
+    padding:24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #FFF9ED
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius:16px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+.info-section h2{
+
+    color:
+        var(--purple-deep);
+
+    font-size:20px;
+
+    margin-bottom:10px;
+}
+
+.info-section p{
+
+    color:
+        var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer{
-  background:linear-gradient(135deg,#061f4a,#082c68);
-  color:#fff;
-  text-align:center;
-  padding:28px 15px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:
+        31px 15px;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(249,115,22,.20),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #28103D,
+            #3B176D
+        );
+}
+
+footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    left:-75px;
+    bottom:-85px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,193,7,.07);
+}
+
+.footer-logo{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:18px;
+
+    font-weight:800;
+}
+
+.footer-logo span{
+
+    color:
+        #FFD166;
 }
 
 footer p{
-  margin:5px;
-  font-size:14px;
-}
 
-footer a{
-  color:#7dd3fc;
-  text-decoration:none;
-  margin:0 5px;
-}
+    position:relative;
 
-/* TABLET */
-@media(max-width:800px){
+    z-index:2;
 
-  .cards{
-    grid-template-columns:repeat(2,1fr);
-  }
+    margin-top:7px;
 
-  .info-grid{
-    grid-template-columns:1fr;
-  }
+    color:
+        rgba(255,255,255,.80);
 
-  .logo{
-    font-size:32px;
-  }
-}
-
-/* MOBILE */
-@media(max-width:550px){
-
-  .topbar{
     font-size:12px;
-  }
+}
 
-  header{
-    padding:28px 12px;
-  }
+.footer-links{
 
-  .logo{
-    font-size:29px;
-  }
+    position:relative;
 
-  .tagline{
-    font-size:14px;
-  }
+    z-index:2;
 
-  nav{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:5px;
-  }
+    margin-top:11px;
+}
 
-  nav a{
-    text-align:center;
-    padding:10px 5px;
+.footer-links a{
+
+    color:
+        rgba(255,255,255,.92);
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    margin:0 8px;
+
+    transition:.2s;
+}
+
+.footer-links a:hover{
+
+    color:
+        #FFD166;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(30,15,45,.65);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+.modal.show{
+
+    display:flex;
+}
+
+.modal-content{
+
+    width:100%;
+
+    max-width:500px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.25);
+
+    animation:
+        modalIn .25s ease;
+}
+
+@keyframes modalIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.modal-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:17px;
+}
+
+.modal-header h2{
+
+    color:
+        var(--purple-deep);
+
+    font-size:20px;
+}
+
+.close-modal{
+
+    width:35px;
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        #F4ECFA;
+
+    color:
+        var(--purple-deep);
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+.modal-body{
+
+    color:
+        var(--muted);
+
     font-size:13px;
-  }
 
-  main{
-    padding:18px 12px 40px;
-  }
+    line-height:1.8;
+}
 
-  .hero{
-    padding:25px 15px;
-  }
+.modal-body strong{
 
-  .hero h1{
-    font-size:25px;
-  }
+    color:
+        var(--text);
+}
 
-  .hero p{
-    font-size:15px;
-  }
 
-  .section-title{
-    font-size:22px;
-  }
+/* =========================================================
+   TABLET
+========================================================= */
 
-  .cards{
-    grid-template-columns:1fr;
-  }
+@media(max-width:900px){
 
-  .search-box{
-    flex-direction:column;
-  }
+    .jobs-grid{
 
-  .search-box button{
-    padding:12px;
-  }
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
 
+    .quick-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .top-header{
+
+        padding:
+            21px 12px 20px;
+    }
+
+    .logo{
+
+        font-size:24px;
+    }
+
+    .tagline{
+
+        font-size:11px;
+    }
+
+
+    .nav-container{
+
+        justify-content:flex-start;
+    }
+
+    .nav-container a{
+
+        padding:
+            13px 12px;
+
+        font-size:11px;
+    }
+
+
+    .container{
+
+        padding:
+            17px 10px 40px;
+    }
+
+
+    .hero{
+
+        padding:
+            25px 14px;
+
+        border-radius:16px;
+    }
+
+    .hero-icon{
+
+        width:48px;
+        height:48px;
+
+        font-size:24px;
+    }
+
+    .hero h1{
+
+        font-size:21px;
+    }
+
+    .hero p{
+
+        font-size:12px;
+
+        line-height:1.65;
+    }
+
+
+    .search-box{
+
+        flex-direction:column;
+
+        gap:8px;
+    }
+
+    .search-box input{
+
+        width:100%;
+    }
+
+    .search-btn{
+
+        min-height:42px;
+    }
+
+
+    .section-title{
+
+        font-size:18px;
+
+        margin-top:23px;
+    }
+
+    .section-title::before{
+
+        height:25px;
+    }
+
+
+    .filter-buttons{
+
+        gap:7px;
+    }
+
+    .filter-btn{
+
+        padding:
+            7px 11px;
+
+        font-size:11px;
+    }
+
+
+    .jobs-grid{
+
+        grid-template-columns:1fr;
+
+        gap:14px;
+    }
+
+    .job-card{
+
+        padding:18px;
+
+        border-radius:14px;
+    }
+
+    .job-card h3{
+
+        font-size:16px;
+    }
+
+    .info{
+
+        font-size:12px;
+    }
+
+
+    .quick-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:10px;
+    }
+
+    .quick-card{
+
+        padding:
+            16px 8px;
+
+        border-radius:13px;
+    }
+
+    .quick-icon{
+
+        width:45px;
+        height:45px;
+
+        font-size:22px;
+    }
+
+    .quick-card strong{
+
+        font-size:12px;
+    }
+
+
+    .info-section{
+
+        padding:19px;
+    }
+
+    .info-section h2{
+
+        font-size:18px;
+    }
+
+
+    footer{
+
+        padding:
+            27px 12px;
+    }
+
+    .footer-logo{
+
+        font-size:16px;
+    }
+
+    .footer-links a{
+
+        margin:0 5px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:360px){
+
+    .logo{
+
+        font-size:22px;
+    }
+
+    .nav-container a{
+
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .hero h1{
+
+        font-size:19px;
+    }
+
+    .quick-grid{
+
+        gap:8px;
+    }
 }
 
 </style>
 </head>
 
+
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-📢 Latest Government Jobs • Vacancy • Admit Card • Results • Answer Key
-</div>
 
-<!-- HEADER -->
-<header>
+<!-- ======================================================
+     HEADER
+======================================================= -->
 
-<div class="logo">
-NSD <span>Vishu</span> Result
-</div>
+<header class="top-header">
 
-<div class="tagline">
-Latest Government Vacancy, Admit Card, Result & Answer Key Updates
-</div>
+    <div class="logo">
+        NSD <span>Vishu</span> Result
+    </div>
+
+    <div class="tagline">
+        Latest Government Vacancy & Sarkari Job Updates
+    </div>
 
 </header>
 
-<!-- NAVIGATION -->
-<nav>
 
-<a href="index.html">🏠 Home</a>
+<!-- ======================================================
+     NAVBAR
+======================================================= -->
 
-<a href="#jobs">💼 Latest Jobs</a>
+<nav class="navbar">
 
-<a href="vacancy.html">📋 Vacancy</a>
+    <div class="nav-container">
 
-<a href="#admit">🎫 Admit Card</a>
+        <a href="#home" class="active">
+            🏠 Home
+        </a>
 
-<a href="#results">📊 Results</a>
+        <a href="#jobs">
+            💼 Latest Jobs
+        </a>
 
-<a href="#answer">🔑 Answer Key</a>
+        <a href="#vacancy">
+            📋 Vacancy
+        </a>
+
+        <a href="#admit">
+            🎫 Admit Card
+        </a>
+
+        <a href="#results">
+            📊 Results
+        </a>
+
+        <a href="#answer">
+            🔑 Answer Key
+        </a>
+
+    </div>
 
 </nav>
 
-<!-- MAIN -->
-<main>
 
-<!-- HERO -->
-<section class="hero">
-
-<h1>NSD Vishu Result</h1>
-
-<p>
-Government Jobs, Sarkari Vacancy, Admit Card,
-Results और Answer Key की जानकारी एक जगह
-</p>
-
-</section>
-
-<!-- SEARCH -->
-<div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="🔍 Search Government Job..."
-onkeyup="searchJobs()"
->
-
-<button onclick="searchJobs()">Search</button>
-
-</div>
-
-<!-- NOTICE -->
-<div class="notice">
-
-⚠️ <strong>Important:</strong>
-किसी भी भर्ती के लिए आवेदन करने से पहले संबंधित विभाग की
-Official Notification जरूर पढ़ें।
-
-</div>
-
-<!-- JOB SECTION -->
-<section id="jobs">
-
-<h2 class="section-title">
-🔥 Latest Government Jobs 2026
-</h2>
-
-<div class="cards" id="jobCards">
-
-<!-- JOB 1 -->
-<div class="card job-card">
-
-<span class="badge">NEW</span>
-
-<h3>SSC Recruitment 2026</h3>
-
-<p>Staff Selection Commission</p>
-
-<p>
-<strong>Qualification:</strong> Graduation
-</p>
-
-<p>
-<strong>Last Date:</strong>
-Check Official Notification
-</p>
-
-<a href="#" class="btn">
-View Details
-</a>
-
-</div>
-
-<!-- JOB 2 -->
-<div class="card job-card">
-
-<span class="badge">NEW</span>
-
-<h3>Railway Recruitment 2026</h3>
-
-<p>Railway Recruitment Board</p>
-
-<p>
-<strong>Qualification:</strong>
-10th / 12th / Graduation
-</p>
-
-<p>
-<strong>Last Date:</strong>
-Check Official Notification
-</p>
-
-<a href="#" class="btn">
-View Details
-</a>
-
-</div>
-
-<!-- JOB 3 -->
-<div class="card job-card">
-
-<span class="badge">NEW</span>
-
-<h3>SSC CGL Recruitment 2026</h3>
-
-<p>Staff Selection Commission</p>
-
-<p>
-<strong>Qualification:</strong>
-Graduation
-</p>
-
-<p>
-<strong>Last Date:</strong>
-Check Official Notification
-</p>
-
-<a href="#" class="btn">
-View Details
-</a>
-
-</div>
-
-<!-- JOB 4 -->
-<div class="card job-card">
-
-<span class="badge">NEW</span>
-
-<h3>Bihar Government Vacancy 2026</h3>
-
-<p>Various Departments</p>
-
-<p>
-<strong>Qualification:</strong>
-Check Official Notification
-</p>
-
-<p>
-<strong>Last Date:</strong>
-Check Official Notification
-</p>
-
-<a href="#" class="btn">
-View Details
-</a>
-
-</div>
-
-<!-- JOB 5 -->
-<div class="card job-card">
-
-<span class="badge">NEW</span>
-
-<h3>Bank Recruitment 2026</h3>
-
-<p>Various Banking Departments</p>
-
-<p>
-<strong>Qualification:</strong>
-Graduation
-</p>
-
-<p>
-<strong>Last Date:</strong>
-Check Official Notification
-</p>
-
-<a href="#" class="btn">
-View Details
-</a>
-
-</div>
-
-<!-- JOB 6 -->
-<div class="card job-card">
-
-<span class="badge">NEW</span>
-
-<h3>Police Recruitment 2026</h3>
-
-<p>Police Department</p>
-
-<p>
-<strong>Qualification:</strong>
-10th / 12th / Graduation
-</p>
-
-<p>
-<strong>Last Date:</strong>
-Check Official Notification
-</p>
-
-<a href="#" class="btn">
-View Details
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- INFORMATION SECTIONS -->
-<div class="info-grid">
-
-<!-- ADMIT -->
-<section id="admit" class="panel">
-
-<h2>🎫 Latest Admit Cards</h2>
-
-<p>
-SSC, Railway, Banking और Bihar Exams के
-Admit Card की जानकारी यहाँ उपलब्ध होगी।
-</p>
-
-<a href="#" class="btn">
-View Admit Cards
-</a>
-
-</section>
-
-<!-- RESULTS -->
-<section id="results" class="panel">
-
-<h2>📊 Latest Results</h2>
-
-<p>
-Officially published examination result links
-यहाँ उपलब्ध होंगे।
-</p>
-
-<a href="#" class="btn">
-View Results
-</a>
-
-</section>
-
-<!-- ANSWER KEY -->
-<section id="answer" class="panel">
-
-<h2>🔑 Latest Answer Key</h2>
-
-<p>
-विभिन्न Government Exams की Answer Key
-और official updates यहाँ मिलेंगे।
-</p>
-
-<a href="#" class="btn">
-View Answer Key
-</a>
-
-</section>
-
-<!-- UPDATES -->
-<section class="panel">
-
-<h2>📢 Important Updates</h2>
-
-<p>
-Recruitment, Examination, Admit Card और Result
-से जुड़ी नई जानकारी के लिए वेबसाइट को नियमित
-रूप से देखें।
-</p>
-
-<a href="#jobs" class="btn">
-Latest Jobs
-</a>
-
-</section>
-
-</div>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-
-<p>
-© 2026 NSD Vishu Result | All Rights Reserved
-</p>
-
-<p>
-
-<a href="#">Disclaimer</a> |
-
-<a href="#">Privacy Policy</a> |
-
-<a href="#">Contact</a>
-
-</p>
-
-<p>
-⚡ Latest Government Job Updates
-</p>
-
-</footer>
-
-<!-- SEARCH SCRIPT -->
-<script>
-
-function searchJobs(){
-
-let input =
-document.getElementById("searchInput")
-.value
-.toLowerCase()
-.trim();
-
-let cards =
-document.querySelectorAll(".job-card");
-
-cards.forEach(function(card){
-
-let text =
-card.innerText.toLowerCase();
-
-if(text.includes(input)){
-
-card.style.display="block";
-
-}else{
-
-card.style.display="none";
-
-}
-
-});
-
-}
-
-</script>
-
-</body>
-</html>
+<!-- ======================================================
+     MAIN
+=====================
